@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="412.0" prefWidth="238.0" style="-fx-background-color: #27292b;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EditEquipeCrudController">
+   <children>
+      <MFXTextField fx:id="idTextField" layoutX="54.0" layoutY="61.0" lineColor="#ff4d00" promptText="ID" stylesheets="@css/style.css" />
+      <MFXTextField fx:id="nomTextField" layoutX="54.0" layoutY="115.0" lineColor="#ff4d00" promptText="Nom" stylesheets="@css/style.css" />
+      <MFXTextField fx:id="nbrEmpTextField" layoutX="54.0" layoutY="171.0" lineColor="#ff4d00" promptText="Nombre Employers" stylesheets="@css/style.css" />
+      <MFXTextField fx:id="sommeSalaireTextField" layoutX="54.0" layoutY="226.0" lineColor="#ff4d00" promptText="Somme Salaire" stylesheets="@css/style.css" />
+      <MFXButton fx:id="btnSave" layoutX="81.0" layoutY="346.0" onAction="#editEquipe" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #d5dfed;" text="Save" />
+      <MFXButton fx:id="btnClose" layoutX="206.0" layoutY="14.0" onAction="#hideAddEquipe" prefHeight="25.0" prefWidth="18.0" style="-fx-background-color: #ff214e;" text="X" />
+      <MFXTextField fx:id="idDepartementTextField" layoutX="54.0" layoutY="278.0" lineColor="#ff4d00" promptText="ID Departement" stylesheets="@css/style.css" />
+   </children>
+</AnchorPane>

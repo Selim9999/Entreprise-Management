@@ -1,0 +1,4 @@
+2    |    y    |    ghaith    |    714    |    18
+3    |    rtrt    |    yuyu    |    14    |    18
+1    |    x    |    ioio    |    152    |    14
+4    |    io    |    oioi    |    147    |    15

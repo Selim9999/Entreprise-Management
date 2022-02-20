@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DashboardController">
+   <children>
+      <MFXButton fx:id="btnLogout" layoutX="892.0" layoutY="703.0" onAction="#loginoutButtonOnAction" prefHeight="44.0" prefWidth="169.0" style="-fx-background-color: #27292b;" text="Logout" textFill="WHITE" />
+      <BorderPane fx:id="mainPane" prefHeight="768.0" prefWidth="1086.0">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="1086.0" spacing="80.0" style="-fx-background-color: #9ea9ff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="InformaTn" textFill="#27292b">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <MFXButton onAction="#CloseDashboardStage" style="-fx-background-color: #9ea9ff;" text="X" textFill="#27292b" translateX="842.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MFXButton>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" text="" visible="false">
+                     <HBox.margin>
+                        <Insets right="-60.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <MFXTextField alignment="CENTER" lineColor="#ff4d00" prefHeight="25.0" prefWidth="343.0" promptText="Search for..." unfocusedLineColor="#cdcdcd" visible="false" />
+                  <Label text="Welcome" textFill="#27292b" translateX="120.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="loginUsername" text="L" textFill="#27292b" translateX="120.0">
+                     <HBox.margin>
+                        <Insets left="-73.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <AnchorPane style="-fx-background-color: #f2f2f2;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutY="43.0" prefHeight="100.0" prefWidth="186.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" translateX="47.0">
+                           <image>
+                              <Image url="@images/logo.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" layoutY="205.0">
+                     <children>
+                        <MFXButton alignment="BASELINE_LEFT" onAction="#handleActionOverview" prefHeight="50.0" prefWidth="246.0" rippleColor="#9ea9ff" style="-fx-background-color: #f2f2f2;" text="Dashboard">
+                           <graphic>
+                              <FontAwesomeIconView fill="#27292b" glyphName="DASHBOARD" size="30" strokeWidth="10.0" translateX="-8.0" translateY="-1.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </FontAwesomeIconView>
+                           </graphic>
+                           <padding>
+                              <Insets left="67.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MFXButton>
+                        <MFXButton fx:id="btnDepartments" alignment="BASELINE_LEFT" onAction="#handleActionDepartments" prefHeight="50.0" prefWidth="246.0" rippleColor="#9ea9ff" style="-fx-background-color: #f2f2f2;" text="Departments">
+                           <graphic>
+                              <FontAwesomeIconView fill="#27292b" glyphName="HOME" size="30" strokeWidth="10.0" translateX="-8.0" translateY="-1.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </FontAwesomeIconView>
+                           </graphic>
+                           <padding>
+                              <Insets left="67.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MFXButton>
+                        <MFXButton fx:id="btnEquipe" alignment="BASELINE_LEFT" onAction="#handleActionEquipe" prefHeight="50.0" prefWidth="246.0" rippleColor="#9ea9ff" style="-fx-background-color: #f2f2f2;" text="Equipe" textAlignment="CENTER">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="USERS" size="23" text="" translateX="-10.0" translateY="-1.0">
+                                 <font>
+                                    <Font size="54.0" />
+                                 </font>
+                              </FontAwesomeIconView>
+                           </graphic>
+                           <padding>
+                              <Insets left="70.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MFXButton>
+                        <MFXButton fx:id="btnProjets" alignment="BASELINE_LEFT" onAction="#handleActionProjets" prefHeight="50.0" prefWidth="246.0" rippleColor="#9ea9ff" style="-fx-background-color: #f2f2f2;" text="Projets">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="TASKS" size="23" strokeType="OUTSIDE" translateX="-10.0" translateY="-1.0" />
+                           </graphic>
+                           <padding>
+                              <Insets left="70.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MFXButton>
+                        <MFXButton alignment="BASELINE_LEFT" onAction="#handleActionDirecteur" prefHeight="50.0" prefWidth="246.0" rippleColor="#9ea9ff" style="-fx-background-color: #f2f2f2;" text="Directeur">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="LEGAL" size="25" translateX="-11.0" />
+                           </graphic>
+                           <padding>
+                              <Insets left="68.5" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MFXButton>
+                        <MFXButton fx:id="btnEmploye" alignment="BASELINE_LEFT" onAction="#handleActionEmploye" prefHeight="50.0" prefWidth="246.0" rippleColor="#9ea9ff" style="-fx-background-color: #f2f2f2;" text="Employe">
+                           <graphic>
+                              <FontAwesomeIconView fill="#27292b" glyphName="USER" size="23" strokeWidth="10.0" translateX="-15.5" translateY="-1.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </FontAwesomeIconView>
+                           </graphic>
+                           <padding>
+                              <Insets left="79.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MFXButton>
+                     </children>
+                  </VBox>
+                  <MFXButton alignment="BASELINE_LEFT" layoutY="660.0" onAction="#loginoutButtonOnAction" prefHeight="50.0" prefWidth="246.0" rippleColor="#9ea9ff" style="-fx-background-color: #f2f2f2;" text="Logout">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="23" translateX="-8.0" translateY="-1.0" />
+                     </graphic>
+                     <padding>
+                        <Insets left="72.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MFXButton>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="710.0" prefWidth="841.0" style="-fx-background-color: #faf5f5;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+MFXPasswordField {
+  -fx-prompt-text-fill: #858585;
+  -fx-text-fill: #f5f5f5;
+}
+
+MFXTextField {
+  -fx-prompt-text-fill: #858585;
+  -fx-text-fill: #f5f5f5;
+}
+
+.mfx-date-picker .text-field{
+  -fx-text-fill: #f5f5f5;
+}

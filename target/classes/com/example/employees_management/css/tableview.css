@@ -1,0 +1,6 @@
+.table-row-cell:selected {
+   -fx-background-color: black;
+}
+.table-row-cell:selected .text {
+       -fx-fill:  blue;
+}

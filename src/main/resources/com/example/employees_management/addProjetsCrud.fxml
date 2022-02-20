@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="412.0" prefWidth="238.0" style="-fx-background-color: #27292b;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddProjetsCrudController">
+   <children>
+      <MFXTextField fx:id="idTextField" layoutX="54.0" layoutY="71.0" lineColor="#ff4d00" promptText="ID" stylesheets="@css/style.css" />
+      <MFXTextField fx:id="descriptionTextField" layoutX="54.0" layoutY="121.0" lineColor="#ff4d00" promptText="Description" stylesheets="@css/style.css" />
+      <MFXTextField fx:id="idEquipeTextField" layoutX="52.0" layoutY="275.0" lineColor="#ff4d00" prefHeight="0.0" prefWidth="135.0" promptText="ID Equipe" stylesheets="@css/style.css" />
+      <MFXButton fx:id="btnAddProjets" layoutX="81.0" layoutY="346.0" onAction="#addProjets" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #d5dfed;" text="Add" />
+      <MFXButton fx:id="btnClose" layoutX="206.0" layoutY="14.0" onAction="#hideAddProjets" prefHeight="25.0" prefWidth="18.0" style="-fx-background-color: #ff214e;" text="X" />
+      <MFXDatePicker fx:id="dateDebutDatePicker" layoutX="58.0" layoutY="165.0" lineColor="#4d4d4db2" maxHeight="-Infinity" maxWidth="-Infinity" pickerColor="#ff214e" prefHeight="30.0" prefWidth="123.0" stylesheets="@css/style.css" />
+      <MFXDatePicker fx:id="dateFinDatePicker" layoutX="58.0" layoutY="216.0" lineColor="#4d4d4db2" maxHeight="-Infinity" maxWidth="-Infinity" pickerColor="#ff214e" prefHeight="30.0" prefWidth="123.0" stylesheets="@css/style.css" />
+   </children>
+</AnchorPane>
